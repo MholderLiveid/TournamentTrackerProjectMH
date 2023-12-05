@@ -37,11 +37,8 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             panelMenu = new Panel();
-            createTournamentButton = new Button();
             CloseCurrentFormButton = new Button();
-            tournamentViewerButton = new Button();
             panel2 = new Panel();
-            button1 = new Button();
             panelDesktop = new Panel();
             homePageLogo = new PictureBox();
             panelTitle.SuspendLayout();
@@ -156,31 +153,13 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(0, 63, 121);
-            panelMenu.Controls.Add(createTournamentButton);
             panelMenu.Controls.Add(CloseCurrentFormButton);
-            panelMenu.Controls.Add(tournamentViewerButton);
             panelMenu.Controls.Add(panel2);
-            panelMenu.Controls.Add(button1);
             panelMenu.Dock = DockStyle.Top;
             panelMenu.Location = new Point(0, 84);
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(1382, 59);
             panelMenu.TabIndex = 2;
-            // 
-            // createTournamentButton
-            // 
-            createTournamentButton.Dock = DockStyle.Left;
-            createTournamentButton.FlatAppearance.BorderSize = 0;
-            createTournamentButton.FlatStyle = FlatStyle.Flat;
-            createTournamentButton.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            createTournamentButton.ForeColor = Color.FromArgb(245, 245, 255);
-            createTournamentButton.Location = new Point(237, 0);
-            createTournamentButton.Name = "createTournamentButton";
-            createTournamentButton.Size = new Size(187, 59);
-            createTournamentButton.TabIndex = 5;
-            createTournamentButton.Text = "Create New\r\nTournament";
-            createTournamentButton.UseVisualStyleBackColor = true;
-            createTournamentButton.Click += createTournamentButton_Click;
             // 
             // CloseCurrentFormButton
             // 
@@ -197,21 +176,6 @@
             CloseCurrentFormButton.UseVisualStyleBackColor = true;
             CloseCurrentFormButton.Click += CloseCurrentFormButton_Click;
             // 
-            // tournamentViewerButton
-            // 
-            tournamentViewerButton.Dock = DockStyle.Left;
-            tournamentViewerButton.FlatAppearance.BorderSize = 0;
-            tournamentViewerButton.FlatStyle = FlatStyle.Flat;
-            tournamentViewerButton.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            tournamentViewerButton.ForeColor = Color.FromArgb(245, 245, 255);
-            tournamentViewerButton.Location = new Point(50, 0);
-            tournamentViewerButton.Name = "tournamentViewerButton";
-            tournamentViewerButton.Size = new Size(187, 59);
-            tournamentViewerButton.TabIndex = 3;
-            tournamentViewerButton.Text = "Tournament\r\n Viewer";
-            tournamentViewerButton.UseVisualStyleBackColor = true;
-            tournamentViewerButton.Click += tournamentViewerButton_Click;
-            // 
             // panel2
             // 
             panel2.Dock = DockStyle.Left;
@@ -219,15 +183,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(50, 59);
             panel2.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(255, 73);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // panelDesktop
             // 
@@ -284,11 +239,8 @@
         private FontAwesome.Sharp.IconButton CloseProgramButton;
         private FontAwesome.Sharp.IconButton MinimizeWindow;
         private FontAwesome.Sharp.IconButton MaxWindowButton;
-        private Button tournamentViewerButton;
         private Panel panel2;
-        private Button button1;
         private Button CloseCurrentFormButton;
-        private Button createTournamentButton;
         private PictureBox homePageLogo;
     }
 }

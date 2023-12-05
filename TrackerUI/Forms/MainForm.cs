@@ -263,18 +263,6 @@ public partial class MainForm : Form
         AdjustForm();
     }
 
-    private void tournamentViewerButton_Click(object sender, EventArgs e)
-    {
-        CurrentFormLabel.Text = "Tournament Viewer";
-        OpenChildForm(new TournamentViewerForm(), sender);
-    }
-
-    private void createTournamentButton_Click(object sender, EventArgs e)
-    {
-        CurrentFormLabel.Text = "Create Tournament";
-        OpenChildForm(new CreateTournamentForm(), sender);
-    }
-
     private void CloseCurrentFormButton_Click(object sender, EventArgs e)
     {
         if (activeForm != null)
@@ -285,8 +273,6 @@ public partial class MainForm : Form
     }
 
     #endregion
-
-
 }
 
 
