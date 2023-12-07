@@ -7,7 +7,7 @@ public partial class MainForm : Form
 {
     #region Fields
 
-    private int borderSize = 4;
+    private int borderSize = 2;
     private Size formSize;
     private Button currentButton;
     private Form activeForm;
@@ -22,6 +22,7 @@ public partial class MainForm : Form
         this.Padding = new Padding(borderSize);
         this.BackColor = ColorCodes.FormBackColor;
         CloseCurrentFormButton.Visible = false;
+
     }
 
     #endregion
@@ -273,6 +274,11 @@ public partial class MainForm : Form
     }
 
     #endregion
+
+    private void tournamentDashboardButton_Click(object sender, EventArgs e)
+    {
+        OpenChildForm(new TournamentDashboardForm(), sender);
+    }
 }
 
 

@@ -41,6 +41,7 @@
             panel2 = new Panel();
             panelDesktop = new Panel();
             homePageLogo = new PictureBox();
+            tournamentDashboardButton = new Button();
             panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMenu.SuspendLayout();
@@ -153,6 +154,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(0, 63, 121);
+            panelMenu.Controls.Add(tournamentDashboardButton);
             panelMenu.Controls.Add(CloseCurrentFormButton);
             panelMenu.Controls.Add(panel2);
             panelMenu.Dock = DockStyle.Top;
@@ -205,6 +207,21 @@
             homePageLogo.TabIndex = 0;
             homePageLogo.TabStop = false;
             // 
+            // tournamentDashboardButton
+            // 
+            tournamentDashboardButton.Dock = DockStyle.Left;
+            tournamentDashboardButton.FlatAppearance.BorderSize = 0;
+            tournamentDashboardButton.FlatStyle = FlatStyle.Flat;
+            tournamentDashboardButton.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            tournamentDashboardButton.ForeColor = Color.FromArgb(245, 245, 255);
+            tournamentDashboardButton.Location = new Point(50, 0);
+            tournamentDashboardButton.Name = "tournamentDashboardButton";
+            tournamentDashboardButton.Size = new Size(211, 59);
+            tournamentDashboardButton.TabIndex = 5;
+            tournamentDashboardButton.Text = "Tournament Dashboard";
+            tournamentDashboardButton.UseVisualStyleBackColor = true;
+            tournamentDashboardButton.Click += tournamentDashboardButton_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -242,5 +259,6 @@
         private Panel panel2;
         private Button CloseCurrentFormButton;
         private PictureBox homePageLogo;
+        private Button tournamentDashboardButton;
     }
 }

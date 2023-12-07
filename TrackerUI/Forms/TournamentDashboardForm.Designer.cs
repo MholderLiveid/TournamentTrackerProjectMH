@@ -40,7 +40,7 @@
             loadExistingTournamentDropdown.BackColor = Color.FromArgb(245, 245, 255);
             loadExistingTournamentDropdown.ForeColor = Color.FromArgb(0, 63, 121);
             loadExistingTournamentDropdown.FormattingEnabled = true;
-            loadExistingTournamentDropdown.Location = new Point(37, 61);
+            loadExistingTournamentDropdown.Location = new Point(456, 264);
             loadExistingTournamentDropdown.Name = "loadExistingTournamentDropdown";
             loadExistingTournamentDropdown.Size = new Size(388, 39);
             loadExistingTournamentDropdown.TabIndex = 18;
@@ -51,7 +51,7 @@
             loadExistingTournamentLabel.AutoSize = true;
             loadExistingTournamentLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             loadExistingTournamentLabel.ForeColor = Color.FromArgb(0, 63, 121);
-            loadExistingTournamentLabel.Location = new Point(92, 27);
+            loadExistingTournamentLabel.Location = new Point(511, 230);
             loadExistingTournamentLabel.Name = "loadExistingTournamentLabel";
             loadExistingTournamentLabel.Size = new Size(278, 31);
             loadExistingTournamentLabel.TabIndex = 17;
@@ -66,7 +66,7 @@
             loadTournamentButton.FlatStyle = FlatStyle.Flat;
             loadTournamentButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             loadTournamentButton.ForeColor = Color.FromArgb(0, 63, 121);
-            loadTournamentButton.Location = new Point(114, 121);
+            loadTournamentButton.Location = new Point(533, 324);
             loadTournamentButton.Name = "loadTournamentButton";
             loadTournamentButton.Size = new Size(234, 50);
             loadTournamentButton.TabIndex = 19;
@@ -82,7 +82,7 @@
             createTournamentButton.FlatStyle = FlatStyle.Flat;
             createTournamentButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             createTournamentButton.ForeColor = Color.FromArgb(0, 63, 121);
-            createTournamentButton.Location = new Point(84, 193);
+            createTournamentButton.Location = new Point(503, 396);
             createTournamentButton.Name = "createTournamentButton";
             createTournamentButton.Size = new Size(295, 73);
             createTournamentButton.TabIndex = 23;
@@ -100,7 +100,7 @@
             Controls.Add(loadExistingTournamentDropdown);
             Controls.Add(loadExistingTournamentLabel);
             Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "TournamentDashboardForm";
             Text = "TournamentDashboardForm";
             ResumeLayout(false);
