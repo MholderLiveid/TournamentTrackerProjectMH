@@ -273,12 +273,14 @@ public partial class MainForm : Form
         }
     }
 
-    #endregion
-
     private void tournamentDashboardButton_Click(object sender, EventArgs e)
     {
         OpenChildForm(new TournamentDashboardForm(), sender);
     }
+
+    #endregion
+
+
 }
 
 

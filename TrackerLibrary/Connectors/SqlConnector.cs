@@ -1,7 +1,7 @@
 ﻿using TrackerLibrary.Interface;
 using TrackerLibrary.Models;
 
-namespace TrackerLibrary;
+namespace TrackerLibrary.Connectors;
 
 public class SqlConnector : IDataConnection
 {
@@ -13,7 +13,7 @@ public class SqlConnector : IDataConnection
     /// <returns>The prize information, including the unique identifier.</returns>
     public PrizeModel CreatePrize(PrizeModel model)
     {
-        model.Id = 1; 
+        model.Id = 1;
 
         return model;
     }
