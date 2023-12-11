@@ -1,4 +1,5 @@
-﻿using TrackerLibrary.Connectors;
+﻿using System.Configuration;
+using TrackerLibrary.Connectors;
 using TrackerLibrary.Interface;
 
 namespace TrackerLibrary;
@@ -22,5 +23,10 @@ public static class GlobalConfig
             TextConnector text = new TextConnector();
             Connections.Add(text);
         }
+    }
+
+    public static string CnnString(string name)
+    {
+        return ConfigurationManager.ConnectionStrings[name].ConnectionString;
     }
 }

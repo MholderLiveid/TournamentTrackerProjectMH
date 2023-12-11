@@ -38,6 +38,7 @@
             prizePercentageLabel = new Label();
             orLabel = new Label();
             createPrizeButton = new Button();
+            invalidPlaceNumberLabel = new Label();
             SuspendLayout();
             // 
             // placeNumberValue
@@ -167,12 +168,26 @@
             createPrizeButton.UseVisualStyleBackColor = true;
             createPrizeButton.Click += createPrizeButton_Click;
             // 
+            // invalidPlaceNumberLabel
+            // 
+            invalidPlaceNumberLabel.AutoSize = true;
+            invalidPlaceNumberLabel.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            invalidPlaceNumberLabel.ForeColor = Color.Red;
+            invalidPlaceNumberLabel.Location = new Point(452, 47);
+            invalidPlaceNumberLabel.Name = "invalidPlaceNumberLabel";
+            invalidPlaceNumberLabel.Size = new Size(378, 28);
+            invalidPlaceNumberLabel.TabIndex = 23;
+            invalidPlaceNumberLabel.Text = "Invalid format, please enter a valid integer";
+            invalidPlaceNumberLabel.TextAlign = ContentAlignment.MiddleCenter;
+            invalidPlaceNumberLabel.Visible = false;
+            // 
             // CreatePrizeForm
             // 
             AutoScaleDimensions = new SizeF(13F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 245, 255);
             ClientSize = new Size(1300, 698);
+            Controls.Add(invalidPlaceNumberLabel);
             Controls.Add(createPrizeButton);
             Controls.Add(orLabel);
             Controls.Add(prizePercentageValue);
@@ -203,5 +218,6 @@
         private Label prizePercentageLabel;
         private Label orLabel;
         private Button createPrizeButton;
+        private Label invalidPlaceNumberLabel;
     }
 }
