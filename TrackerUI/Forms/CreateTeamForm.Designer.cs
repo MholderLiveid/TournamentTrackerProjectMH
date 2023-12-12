@@ -143,6 +143,7 @@
             createMemberButton.TabIndex = 19;
             createMemberButton.Text = "Create Member";
             createMemberButton.UseVisualStyleBackColor = true;
+            createMemberButton.Click += createMemberButton_Click;
             // 
             // cellphoneValue
             // 
@@ -254,9 +255,9 @@
             deleteSelectedMemberButton.FlatStyle = FlatStyle.Flat;
             deleteSelectedMemberButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             deleteSelectedMemberButton.ForeColor = Color.FromArgb(0, 63, 121);
-            deleteSelectedMemberButton.Location = new Point(826, 305);
+            deleteSelectedMemberButton.Location = new Point(543, 645);
             deleteSelectedMemberButton.Name = "deleteSelectedMemberButton";
-            deleteSelectedMemberButton.Size = new Size(118, 73);
+            deleteSelectedMemberButton.Size = new Size(194, 73);
             deleteSelectedMemberButton.TabIndex = 20;
             deleteSelectedMemberButton.Text = "Delete Selected";
             deleteSelectedMemberButton.UseVisualStyleBackColor = true;
@@ -270,7 +271,7 @@
             createTeamButton.FlatStyle = FlatStyle.Flat;
             createTeamButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             createTeamButton.ForeColor = Color.FromArgb(0, 63, 121);
-            createTeamButton.Location = new Point(361, 647);
+            createTeamButton.Location = new Point(82, 645);
             createTeamButton.Name = "createTeamButton";
             createTeamButton.Size = new Size(295, 73);
             createTeamButton.TabIndex = 21;

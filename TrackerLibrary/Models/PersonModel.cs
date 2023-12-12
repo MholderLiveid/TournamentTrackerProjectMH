@@ -3,6 +3,11 @@
 public class PersonModel
 {
     /// <summary>
+    /// The unique identifier for the person.
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
     /// Represents the person's first name.
     /// </summary>
     public string FirstName { get; set; }

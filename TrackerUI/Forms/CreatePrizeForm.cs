@@ -22,21 +22,20 @@ public partial class CreatePrizeForm : Form
     {
         bool output = true;
         int placeNumber = 0;
-        bool placeNumberValidNumber = int.TryParse(placeNameValue.Text, out placeNumber);
+        bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
 
         if (placeNumberValidNumber == false)
-        {
-            
+        {          
             output = false;
         }
-
+       
         if (placeNumber < 1)
-        {
+        {           
             output = false;
         }
 
         if (placeNameValue.Text.Length == 0)
-        {
+        {          
             output = false;
         }
 
@@ -73,22 +72,19 @@ public partial class CreatePrizeForm : Form
         if (ValidateForm())
         {
             PrizeModel model = new PrizeModel(
-                placeNumberValue.Text,
+                placeNameValue.Text,
                 placeNumberValue.Text,
                 prizeAmountValue.Text,
                 prizePercentageValue.Text);
 
-            foreach (IDataConnection db in GlobalConfig.Connections)
-            {
-                db.CreatePrize(model);
-            }
-            
+            GlobalConfig.Connection.CreatePrize(model);
+
             placeNumberValue.Text = "";
-            placeNumberValue.Text = "";
+            placeNameValue.Text = "";
             prizeAmountValue.Text = "0";
             prizePercentageValue.Text = "0";
 
-            
+
         }
     }
 

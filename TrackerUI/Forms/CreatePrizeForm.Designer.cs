@@ -39,6 +39,11 @@
             orLabel = new Label();
             createPrizeButton = new Button();
             invalidPlaceNumberLabel = new Label();
+            invalidPlaceNameLabel = new Label();
+            invalidPrizeAmountLabel = new Label();
+            invalidPrizePercentageLabel = new Label();
+            invalidPlaceNumberValueLabel = new Label();
+            invalidPlaceNameFormatLabel = new Label();
             SuspendLayout();
             // 
             // placeNumberValue
@@ -175,11 +180,76 @@
             invalidPlaceNumberLabel.ForeColor = Color.Red;
             invalidPlaceNumberLabel.Location = new Point(452, 47);
             invalidPlaceNumberLabel.Name = "invalidPlaceNumberLabel";
-            invalidPlaceNumberLabel.Size = new Size(378, 28);
+            invalidPlaceNumberLabel.Size = new Size(385, 28);
             invalidPlaceNumberLabel.TabIndex = 23;
-            invalidPlaceNumberLabel.Text = "Invalid format, please enter a valid integer";
+            invalidPlaceNumberLabel.Text = "Invalid format, please enter a valid number\r\n";
             invalidPlaceNumberLabel.TextAlign = ContentAlignment.MiddleCenter;
             invalidPlaceNumberLabel.Visible = false;
+            // 
+            // invalidPlaceNameLabel
+            // 
+            invalidPlaceNameLabel.AutoSize = true;
+            invalidPlaceNameLabel.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            invalidPlaceNameLabel.ForeColor = Color.Red;
+            invalidPlaceNameLabel.Location = new Point(452, 102);
+            invalidPlaceNameLabel.Name = "invalidPlaceNameLabel";
+            invalidPlaceNameLabel.Size = new Size(300, 28);
+            invalidPlaceNameLabel.TabIndex = 24;
+            invalidPlaceNameLabel.Text = "Invalid format, entry can't be null\r\n";
+            invalidPlaceNameLabel.TextAlign = ContentAlignment.MiddleCenter;
+            invalidPlaceNameLabel.Visible = false;
+            // 
+            // invalidPrizeAmountLabel
+            // 
+            invalidPrizeAmountLabel.AutoSize = true;
+            invalidPrizeAmountLabel.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            invalidPrizeAmountLabel.ForeColor = Color.Red;
+            invalidPrizeAmountLabel.Location = new Point(452, 155);
+            invalidPrizeAmountLabel.Name = "invalidPrizeAmountLabel";
+            invalidPrizeAmountLabel.Size = new Size(385, 28);
+            invalidPrizeAmountLabel.TabIndex = 25;
+            invalidPrizeAmountLabel.Text = "Invalid format, please enter a valid number\r\n";
+            invalidPrizeAmountLabel.TextAlign = ContentAlignment.MiddleCenter;
+            invalidPrizeAmountLabel.Visible = false;
+            // 
+            // invalidPrizePercentageLabel
+            // 
+            invalidPrizePercentageLabel.AutoSize = true;
+            invalidPrizePercentageLabel.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            invalidPrizePercentageLabel.ForeColor = Color.Red;
+            invalidPrizePercentageLabel.Location = new Point(452, 282);
+            invalidPrizePercentageLabel.Name = "invalidPrizePercentageLabel";
+            invalidPrizePercentageLabel.Size = new Size(385, 28);
+            invalidPrizePercentageLabel.TabIndex = 26;
+            invalidPrizePercentageLabel.Text = "Invalid format, please enter a valid number\r\n";
+            invalidPrizePercentageLabel.TextAlign = ContentAlignment.MiddleCenter;
+            invalidPrizePercentageLabel.Visible = false;
+            // 
+            // invalidPlaceNumberValueLabel
+            // 
+            invalidPlaceNumberValueLabel.AutoSize = true;
+            invalidPlaceNumberValueLabel.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            invalidPlaceNumberValueLabel.ForeColor = Color.Red;
+            invalidPlaceNumberValueLabel.Location = new Point(452, 50);
+            invalidPlaceNumberValueLabel.Name = "invalidPlaceNumberValueLabel";
+            invalidPlaceNumberValueLabel.Size = new Size(415, 28);
+            invalidPlaceNumberValueLabel.TabIndex = 27;
+            invalidPlaceNumberValueLabel.Text = "Invalid format, number must be greater than 1\r\n";
+            invalidPlaceNumberValueLabel.TextAlign = ContentAlignment.MiddleCenter;
+            invalidPlaceNumberValueLabel.Visible = false;
+            // 
+            // invalidPlaceNameFormatLabel
+            // 
+            invalidPlaceNameFormatLabel.AutoSize = true;
+            invalidPlaceNameFormatLabel.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            invalidPlaceNameFormatLabel.ForeColor = Color.Red;
+            invalidPlaceNameFormatLabel.Location = new Point(452, 103);
+            invalidPlaceNameFormatLabel.Name = "invalidPlaceNameFormatLabel";
+            invalidPlaceNameFormatLabel.Size = new Size(395, 28);
+            invalidPlaceNameFormatLabel.TabIndex = 28;
+            invalidPlaceNameFormatLabel.Text = "Invalid format, entry can only contain letters\r\n";
+            invalidPlaceNameFormatLabel.TextAlign = ContentAlignment.MiddleCenter;
+            invalidPlaceNameFormatLabel.Visible = false;
             // 
             // CreatePrizeForm
             // 
@@ -187,6 +257,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 245, 255);
             ClientSize = new Size(1300, 698);
+            Controls.Add(invalidPlaceNameFormatLabel);
+            Controls.Add(invalidPlaceNumberValueLabel);
+            Controls.Add(invalidPrizePercentageLabel);
+            Controls.Add(invalidPrizeAmountLabel);
+            Controls.Add(invalidPlaceNameLabel);
             Controls.Add(invalidPlaceNumberLabel);
             Controls.Add(createPrizeButton);
             Controls.Add(orLabel);
@@ -219,5 +294,10 @@
         private Label orLabel;
         private Button createPrizeButton;
         private Label invalidPlaceNumberLabel;
+        private Label invalidPlaceNameLabel;
+        private Label invalidPrizeAmountLabel;
+        private Label invalidPrizePercentageLabel;
+        private Label invalidPlaceNumberValueLabel;
+        private Label invalidPlaceNameFormatLabel;
     }
 }
