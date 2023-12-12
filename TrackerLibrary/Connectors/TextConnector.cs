@@ -7,12 +7,46 @@ namespace TrackerLibrary.Connectors;
 public class TextConnector : IDataConnection
 {
     private const string PrizesFile = "PrizeModels.csv";
+    private const string PeopleFile = "PersonModels.csv";
 
+    /// <summary>
+    /// Creates a new person and adds it to the storage.
+    /// </summary>
+    /// <param name="model">The person model to be added.</param>
+    /// <returns>The added person model with a unique ID assigned.</returns>
+    /// <remarks>
+    /// This method generates a unique ID for the new person by finding the highest existing ID and incrementing it.
+    /// It then adds the new person to the list of people and updates the storage file.
+    /// </remarks>
     public PersonModel CreatePerson(PersonModel model)
     {
-        throw new NotImplementedException();
+        List<PersonModel> people = PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
+
+        int currentId = 1;
+
+        if (people.Count > 0)
+        {
+            currentId = people.OrderByDescending(x => x.Id).First().Id + 1;
+        }
+
+        model.Id = currentId;
+
+        people.Add(model);
+
+        people.SaveToPeopleFile(PeopleFile);
+
+        return model;
     }
 
+    /// <summary>
+    /// Creates a new prize and adds it to the storage.
+    /// </summary>
+    /// <param name="model">The prize model to be added.</param>
+    /// <returns>The added prize model with a unique ID assigned.</returns>
+    /// <remarks>
+    /// This method generates a unique ID for the new prize by finding the highest existing ID and incrementing it.
+    /// It then adds the new prize to the list of prizes and updates the storage file.
+    /// </remarks>
     public PrizeModel CreatePrize(PrizeModel model)
     {       
         List<PrizeModel> prizes = PrizesFile.FullFilePath().LoadFile().ConvertToPrizeModels();
