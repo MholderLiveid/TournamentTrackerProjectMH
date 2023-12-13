@@ -26,4 +26,15 @@ public class PersonModel
     /// Represents the person's cellphone number.
     /// </summary>
     public string CellphoneNumber { get; set; }
+
+    public string FullName
+    {
+        get
+        {
+            return $"{FirstName} {LastName}";
+        }
+    }
+
+   
+
 }
