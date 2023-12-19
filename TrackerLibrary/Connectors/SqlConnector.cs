@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using System.Data;
+using System.Reflection;
 using TrackerLibrary.Interface;
 using TrackerLibrary.Models;
 
@@ -15,6 +16,7 @@ namespace TrackerLibrary.Connectors;
 public class SqlConnector : IDataConnection
 {
     private const string db = "Tournaments";
+
     public PersonModel CreatePerson(PersonModel model)
     {
         using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
@@ -87,6 +89,27 @@ public class SqlConnector : IDataConnection
         using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
         {
             output = connection.Query<PersonModel>("dbo.spPeople_GetAll").ToList();
+        }
+
+        return output;
+    }
+
+    public List<TeamModel> GetTeam_All()
+    {
+        List<TeamModel> output;
+
+        using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+        {
+            output = connection.Query<TeamModel>("dbo.spTeams_GetAll").ToList();
+
+            foreach (TeamModel team in output)
+            {
+                var p = new DynamicParameters();
+                p.Add("@TeamId", team.Id);
+
+                team.TeamMembers = connection.Query<PersonModel>("dbo.spTeamMembers_GetByTeam", p, commandType: CommandType.StoredProcedure).ToList();
+            }
+
         }
 
         return output;

@@ -91,4 +91,9 @@ public class TextConnector : IDataConnection
         teams.SaveToTeamFile(TeamFile); 
         return model;
     }
+
+    public List<TeamModel> GetTeam_All()
+    {
+        throw new NotImplementedException();
+    }
 }

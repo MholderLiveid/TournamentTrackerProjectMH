@@ -37,11 +37,11 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             panelMenu = new Panel();
+            tournamentDashboardButton = new Button();
             CloseCurrentFormButton = new Button();
             panel2 = new Panel();
             panelDesktop = new Panel();
             homePageLogo = new PictureBox();
-            tournamentDashboardButton = new Button();
             panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMenu.SuspendLayout();
@@ -163,6 +163,21 @@
             panelMenu.Size = new Size(1382, 59);
             panelMenu.TabIndex = 2;
             // 
+            // tournamentDashboardButton
+            // 
+            tournamentDashboardButton.Dock = DockStyle.Left;
+            tournamentDashboardButton.FlatAppearance.BorderSize = 0;
+            tournamentDashboardButton.FlatStyle = FlatStyle.Flat;
+            tournamentDashboardButton.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            tournamentDashboardButton.ForeColor = Color.FromArgb(245, 245, 255);
+            tournamentDashboardButton.Location = new Point(50, 0);
+            tournamentDashboardButton.Name = "tournamentDashboardButton";
+            tournamentDashboardButton.Size = new Size(211, 59);
+            tournamentDashboardButton.TabIndex = 5;
+            tournamentDashboardButton.Text = "Tournament Dashboard";
+            tournamentDashboardButton.UseVisualStyleBackColor = true;
+            tournamentDashboardButton.Click += tournamentDashboardButton_Click;
+            // 
             // CloseCurrentFormButton
             // 
             CloseCurrentFormButton.Dock = DockStyle.Right;
@@ -206,21 +221,6 @@
             homePageLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             homePageLogo.TabIndex = 0;
             homePageLogo.TabStop = false;
-            // 
-            // tournamentDashboardButton
-            // 
-            tournamentDashboardButton.Dock = DockStyle.Left;
-            tournamentDashboardButton.FlatAppearance.BorderSize = 0;
-            tournamentDashboardButton.FlatStyle = FlatStyle.Flat;
-            tournamentDashboardButton.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            tournamentDashboardButton.ForeColor = Color.FromArgb(245, 245, 255);
-            tournamentDashboardButton.Location = new Point(50, 0);
-            tournamentDashboardButton.Name = "tournamentDashboardButton";
-            tournamentDashboardButton.Size = new Size(211, 59);
-            tournamentDashboardButton.TabIndex = 5;
-            tournamentDashboardButton.Text = "Tournament Dashboard";
-            tournamentDashboardButton.UseVisualStyleBackColor = true;
-            tournamentDashboardButton.Click += tournamentDashboardButton_Click;
             // 
             // MainForm
             // 

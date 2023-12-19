@@ -1,23 +1,46 @@
-﻿using TrackerLibrary;
+﻿using System.Runtime.InteropServices;
+using TrackerLibrary;
 using TrackerLibrary.Models;
+using TrackerUI.Interfaces;
 
 namespace TrackerUI.Forms
 {
     public partial class CreateTeamForm : Form
     {
+        #region Fields
+
         private List<PersonModel> availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
+        private ITeamRequester callingForm;
 
+        #endregion
 
         #region Constructor
 
-        public CreateTeamForm()
+        public CreateTeamForm(ITeamRequester caller)
         {
             InitializeComponent();
-            // CreateSampleData();
+
+            callingForm = caller;
+
             WireUpLists();
         }
 
+        #endregion
+
+        #region Drag Form
+
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void titlePanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
         #endregion
 
         #region Private Methods
@@ -64,14 +87,6 @@ namespace TrackerUI.Forms
             availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         }
 
-        private void CreateSampleData()
-        {
-            availableTeamMembers.Add(new PersonModel { FirstName = "Matt", LastName = "Holder" });
-            availableTeamMembers.Add(new PersonModel { FirstName = "Steven", LastName = "Holden" });
-
-            selectedTeamMembers.Add(new PersonModel { FirstName = "Jane", LastName = "Smith" });
-            selectedTeamMembers.Add(new PersonModel { FirstName = "Shan", LastName = "Jones" });
-        }
 
         #endregion
 
@@ -141,12 +156,21 @@ namespace TrackerUI.Forms
             t.TeamName = teamNameValue.Text;
             t.TeamMembers = selectedTeamMembers;
 
-            t = GlobalConfig.Connection.CreateTeam(t);
+            GlobalConfig.Connection.CreateTeam(t);
 
-            // TODO - If we aren't closing this form after creation, reset the form
+            callingForm.TeamComplete(t);
+
+            this.Close();
+
+
         }
-        #endregion
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
 
     }
 }

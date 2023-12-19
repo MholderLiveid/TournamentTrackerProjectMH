@@ -172,7 +172,7 @@ public partial class MainForm : Form
 
     #region Private Methods
 
-    private void OpenChildForm(Form childForm, object buttonSender)
+    public void OpenChildForm(Form childForm, object buttonSender)
     {
         if (activeForm != null)
         {
@@ -222,7 +222,7 @@ public partial class MainForm : Form
         }
     }
 
-    private void Reset()
+    public void Reset()
     {
         DeactivateButton();
         CurrentFormLabel.Text = "HOME";
@@ -279,7 +279,6 @@ public partial class MainForm : Form
     }
 
     #endregion
-
 
 }
 
