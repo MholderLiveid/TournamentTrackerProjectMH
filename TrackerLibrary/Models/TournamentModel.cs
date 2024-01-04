@@ -3,6 +3,11 @@
 public class TournamentModel
 {
     /// <summary>
+    /// The unique identifier for the Tournament.
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
     /// Gets or sets the name of the tournament.
     /// </summary>
     public string TournamentName { get; set; }

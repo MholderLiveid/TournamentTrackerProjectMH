@@ -149,7 +149,7 @@
             createPrizeButton.FlatStyle = FlatStyle.Flat;
             createPrizeButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             createPrizeButton.ForeColor = Color.FromArgb(0, 63, 121);
-            createPrizeButton.Location = new Point(43, 443);
+            createPrizeButton.Location = new Point(43, 458);
             createPrizeButton.Name = "createPrizeButton";
             createPrizeButton.Size = new Size(234, 50);
             createPrizeButton.TabIndex = 15;
@@ -166,7 +166,7 @@
             tournamentTeamsListBox.ItemHeight = 31;
             tournamentTeamsListBox.Location = new Point(374, 147);
             tournamentTeamsListBox.Name = "tournamentTeamsListBox";
-            tournamentTeamsListBox.Size = new Size(313, 219);
+            tournamentTeamsListBox.Size = new Size(313, 157);
             tournamentTeamsListBox.TabIndex = 16;
             // 
             // label1
@@ -187,7 +187,7 @@
             removeSelectedPlayersButton.FlatStyle = FlatStyle.Flat;
             removeSelectedPlayersButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             removeSelectedPlayersButton.ForeColor = Color.FromArgb(0, 63, 121);
-            removeSelectedPlayersButton.Location = new Point(714, 220);
+            removeSelectedPlayersButton.Location = new Point(693, 187);
             removeSelectedPlayersButton.Name = "removeSelectedPlayersButton";
             removeSelectedPlayersButton.Size = new Size(118, 73);
             removeSelectedPlayersButton.TabIndex = 18;
@@ -203,7 +203,7 @@
             removeSelectedPrizeButton.FlatStyle = FlatStyle.Flat;
             removeSelectedPrizeButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             removeSelectedPrizeButton.ForeColor = Color.FromArgb(0, 63, 121);
-            removeSelectedPrizeButton.Location = new Point(714, 488);
+            removeSelectedPrizeButton.Location = new Point(693, 393);
             removeSelectedPrizeButton.Name = "removeSelectedPrizeButton";
             removeSelectedPrizeButton.Size = new Size(118, 73);
             removeSelectedPrizeButton.TabIndex = 21;
@@ -215,7 +215,7 @@
             // 
             prizesLabel.AutoSize = true;
             prizesLabel.ForeColor = Color.FromArgb(0, 63, 121);
-            prizesLabel.Location = new Point(374, 381);
+            prizesLabel.Location = new Point(374, 317);
             prizesLabel.Name = "prizesLabel";
             prizesLabel.Size = new Size(73, 31);
             prizesLabel.TabIndex = 20;
@@ -228,9 +228,9 @@
             prizesListBox.ForeColor = Color.FromArgb(0, 63, 121);
             prizesListBox.FormattingEnabled = true;
             prizesListBox.ItemHeight = 31;
-            prizesListBox.Location = new Point(374, 415);
+            prizesListBox.Location = new Point(374, 351);
             prizesListBox.Name = "prizesListBox";
-            prizesListBox.Size = new Size(313, 219);
+            prizesListBox.Size = new Size(313, 157);
             prizesListBox.TabIndex = 19;
             // 
             // createTournamentButton
@@ -241,12 +241,13 @@
             createTournamentButton.FlatStyle = FlatStyle.Flat;
             createTournamentButton.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             createTournamentButton.ForeColor = Color.FromArgb(0, 63, 121);
-            createTournamentButton.Location = new Point(43, 576);
+            createTournamentButton.Location = new Point(314, 553);
             createTournamentButton.Name = "createTournamentButton";
-            createTournamentButton.Size = new Size(234, 58);
+            createTournamentButton.Size = new Size(281, 75);
             createTournamentButton.TabIndex = 22;
             createTournamentButton.Text = "Create Tournament";
             createTournamentButton.UseVisualStyleBackColor = true;
+            createTournamentButton.Click += createTournamentButton_Click;
             // 
             // panel1
             // 
@@ -297,6 +298,7 @@
             closeFormButton.TabIndex = 24;
             closeFormButton.Text = "Close";
             closeFormButton.UseVisualStyleBackColor = true;
+            closeFormButton.Click += closeFormButton_Click;
             // 
             // CreateTournamentForm
             // 

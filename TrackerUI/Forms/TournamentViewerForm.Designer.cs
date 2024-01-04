@@ -42,6 +42,12 @@
             teamTwoLabel = new Label();
             versusLabel = new Label();
             scoreButton = new Button();
+            closeFormButton = new Button();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            titleLabel = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -49,7 +55,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 63, 121);
-            label1.Location = new Point(14, 40);
+            label1.Location = new Point(14, 109);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(141, 31);
@@ -61,7 +67,7 @@
             tournamentName.AutoSize = true;
             tournamentName.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             tournamentName.ForeColor = Color.FromArgb(0, 63, 121);
-            tournamentName.Location = new Point(151, 40);
+            tournamentName.Location = new Point(151, 109);
             tournamentName.Margin = new Padding(4, 0, 4, 0);
             tournamentName.Name = "tournamentName";
             tournamentName.Size = new Size(97, 31);
@@ -73,7 +79,7 @@
             roundLabel.AutoSize = true;
             roundLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             roundLabel.ForeColor = Color.FromArgb(0, 63, 121);
-            roundLabel.Location = new Point(14, 110);
+            roundLabel.Location = new Point(14, 156);
             roundLabel.Name = "roundLabel";
             roundLabel.Size = new Size(80, 31);
             roundLabel.TabIndex = 2;
@@ -85,7 +91,7 @@
             roundDropDown.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             roundDropDown.ForeColor = Color.FromArgb(0, 63, 121);
             roundDropDown.FormattingEnabled = true;
-            roundDropDown.Location = new Point(90, 107);
+            roundDropDown.Location = new Point(90, 153);
             roundDropDown.Name = "roundDropDown";
             roundDropDown.Size = new Size(249, 39);
             roundDropDown.TabIndex = 3;
@@ -96,7 +102,7 @@
             unplayedOnlyCheckBos.FlatStyle = FlatStyle.Flat;
             unplayedOnlyCheckBos.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             unplayedOnlyCheckBos.ForeColor = Color.FromArgb(0, 63, 121);
-            unplayedOnlyCheckBos.Location = new Point(90, 152);
+            unplayedOnlyCheckBos.Location = new Point(90, 198);
             unplayedOnlyCheckBos.Name = "unplayedOnlyCheckBos";
             unplayedOnlyCheckBos.Size = new Size(183, 35);
             unplayedOnlyCheckBos.TabIndex = 4;
@@ -111,7 +117,7 @@
             matchupListBox.ForeColor = Color.FromArgb(0, 63, 121);
             matchupListBox.FormattingEnabled = true;
             matchupListBox.ItemHeight = 31;
-            matchupListBox.Location = new Point(14, 219);
+            matchupListBox.Location = new Point(14, 255);
             matchupListBox.Name = "matchupListBox";
             matchupListBox.Size = new Size(366, 250);
             matchupListBox.TabIndex = 5;
@@ -121,7 +127,7 @@
             teamOneName.AutoSize = true;
             teamOneName.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             teamOneName.ForeColor = Color.FromArgb(0, 63, 121);
-            teamOneName.Location = new Point(444, 219);
+            teamOneName.Location = new Point(427, 255);
             teamOneName.Name = "teamOneName";
             teamOneName.Size = new Size(142, 31);
             teamOneName.TabIndex = 6;
@@ -132,7 +138,7 @@
             teamOneScoreLabel.AutoSize = true;
             teamOneScoreLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             teamOneScoreLabel.ForeColor = Color.FromArgb(0, 63, 121);
-            teamOneScoreLabel.Location = new Point(406, 263);
+            teamOneScoreLabel.Location = new Point(389, 299);
             teamOneScoreLabel.Name = "teamOneScoreLabel";
             teamOneScoreLabel.Size = new Size(70, 31);
             teamOneScoreLabel.TabIndex = 7;
@@ -144,7 +150,7 @@
             teamOneScoreValue.BorderStyle = BorderStyle.FixedSingle;
             teamOneScoreValue.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             teamOneScoreValue.ForeColor = Color.FromArgb(0, 63, 121);
-            teamOneScoreValue.Location = new Point(482, 261);
+            teamOneScoreValue.Location = new Point(465, 297);
             teamOneScoreValue.Name = "teamOneScoreValue";
             teamOneScoreValue.Size = new Size(135, 38);
             teamOneScoreValue.TabIndex = 8;
@@ -155,7 +161,7 @@
             teamTwoScoreValue.BorderStyle = BorderStyle.FixedSingle;
             teamTwoScoreValue.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             teamTwoScoreValue.ForeColor = Color.FromArgb(0, 63, 121);
-            teamTwoScoreValue.Location = new Point(482, 403);
+            teamTwoScoreValue.Location = new Point(465, 439);
             teamTwoScoreValue.Name = "teamTwoScoreValue";
             teamTwoScoreValue.Size = new Size(135, 38);
             teamTwoScoreValue.TabIndex = 11;
@@ -165,7 +171,7 @@
             teamTwoScoreLabel.AutoSize = true;
             teamTwoScoreLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             teamTwoScoreLabel.ForeColor = Color.FromArgb(0, 63, 121);
-            teamTwoScoreLabel.Location = new Point(406, 405);
+            teamTwoScoreLabel.Location = new Point(389, 441);
             teamTwoScoreLabel.Name = "teamTwoScoreLabel";
             teamTwoScoreLabel.Size = new Size(70, 31);
             teamTwoScoreLabel.TabIndex = 10;
@@ -176,7 +182,7 @@
             teamTwoLabel.AutoSize = true;
             teamTwoLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             teamTwoLabel.ForeColor = Color.FromArgb(0, 63, 121);
-            teamTwoLabel.Location = new Point(444, 357);
+            teamTwoLabel.Location = new Point(427, 393);
             teamTwoLabel.Name = "teamTwoLabel";
             teamTwoLabel.Size = new Size(142, 31);
             teamTwoLabel.TabIndex = 9;
@@ -187,7 +193,7 @@
             versusLabel.AutoSize = true;
             versusLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             versusLabel.ForeColor = Color.FromArgb(0, 63, 121);
-            versusLabel.Location = new Point(482, 312);
+            versusLabel.Location = new Point(465, 348);
             versusLabel.Name = "versusLabel";
             versusLabel.Size = new Size(70, 31);
             versusLabel.TabIndex = 12;
@@ -201,19 +207,70 @@
             scoreButton.FlatStyle = FlatStyle.Flat;
             scoreButton.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             scoreButton.ForeColor = Color.FromArgb(0, 63, 121);
-            scoreButton.Location = new Point(622, 326);
+            scoreButton.Location = new Point(605, 362);
             scoreButton.Name = "scoreButton";
             scoreButton.Size = new Size(128, 50);
             scoreButton.TabIndex = 13;
             scoreButton.Text = "Score";
             scoreButton.UseVisualStyleBackColor = true;
             // 
+            // closeFormButton
+            // 
+            closeFormButton.FlatAppearance.BorderColor = Color.FromArgb(0, 63, 121);
+            closeFormButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 63, 121);
+            closeFormButton.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            closeFormButton.FlatStyle = FlatStyle.Flat;
+            closeFormButton.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            closeFormButton.ForeColor = Color.FromArgb(0, 63, 121);
+            closeFormButton.Location = new Point(605, 534);
+            closeFormButton.Name = "closeFormButton";
+            closeFormButton.Size = new Size(128, 50);
+            closeFormButton.TabIndex = 14;
+            closeFormButton.Text = "Close";
+            closeFormButton.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 65, 121);
+            panel1.Controls.Add(titleLabel);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(744, 79);
+            panel1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Left;
+            pictureBox1.Image = Properties.Resources.Tracker_Logo;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(264, 79);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // titleLabel
+            // 
+            titleLabel.Dock = DockStyle.Fill;
+            titleLabel.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            titleLabel.Location = new Point(264, 0);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(480, 79);
+            titleLabel.TabIndex = 1;
+            titleLabel.Text = "Tournament Viewer";
+            titleLabel.TextAlign = ContentAlignment.MiddleLeft;
+            titleLabel.MouseDown += titleLabel_MouseDown;
+            // 
             // TournamentViewerForm
             // 
             AutoScaleDimensions = new SizeF(13F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 245, 255);
-            ClientSize = new Size(902, 508);
+            ClientSize = new Size(744, 596);
+            Controls.Add(panel1);
+            Controls.Add(closeFormButton);
             Controls.Add(scoreButton);
             Controls.Add(versusLabel);
             Controls.Add(teamTwoScoreValue);
@@ -230,9 +287,13 @@
             Controls.Add(label1);
             Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.FromArgb(245, 245, 255);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "TournamentViewerForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TournamentViewerForm";
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -253,5 +314,9 @@
         private Label teamTwoLabel;
         private Label versusLabel;
         private Button scoreButton;
+        private Button closeFormButton;
+        private Panel panel1;
+        private Label titleLabel;
+        private PictureBox pictureBox1;
     }
 }

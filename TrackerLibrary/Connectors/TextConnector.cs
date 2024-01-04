@@ -9,6 +9,7 @@ public class TextConnector : IDataConnection
     private const string PrizesFile = "PrizeModels.csv";
     private const string PeopleFile = "PersonModels.csv";
     private const string TeamFile = "TeamModels.csv";
+    private const string TournamentFile = "TournamentModels.csv";
 
     /// <summary>
     /// Creates a new person and adds it to the storage.
@@ -94,6 +95,14 @@ public class TextConnector : IDataConnection
 
     public List<TeamModel> GetTeam_All()
     {
-        throw new NotImplementedException();
+        return TeamFile.FullFilePath().LoadFile().ConvertToTeamModels(PeopleFile);
+    }
+
+    public TournamentModel CreateTournament(TournamentModel model)
+    {
+        List<TournamentModel> tournaments = TournamentFile
+            .FullFilePath()
+            .LoadFile()
+            .ConvertToTournamentModels(TeamFile, PeopleFile);
     }
 }
